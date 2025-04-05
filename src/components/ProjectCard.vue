@@ -5,30 +5,51 @@ import type { Project } from '../data/portfolio';
 const props = defineProps<{
   project: Project;
 }>();
+
+const getYouTubeId = (url: string) => {
+  const regExp = /^.*(youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=|&v=)([^#&?]*).*/;
+  const match = url.match(regExp);
+  return (match && match[2].length === 11) ? match[2] : null;
+};
 </script>
 
 <template>
   <article class="project-card group relative overflow-hidden" role="article" :aria-labelledby="`project-title-${props.project.id}`">
+    <!-- Decorative Arabic-inspired border -->
     <div class="decorative-border absolute top-0 left-0 right-0 h-1"></div>
     
     <!-- Media section -->
     <template v-if="props.project.media?.src">
-      <component
-        :is="props.project.media.type === 'video' ? 'video' : 'img'"
-        :src="props.project.media.src"
-        :alt="props.project.media.alt"
-        class="w-full object-contain bg-black/50"
-        :aria-label="props.project.media.alt"
-        v-bind="props.project.media.type === 'video' ? { 
-          autoplay: true, 
-          muted: true, 
-          loop: true, 
-          'webkit-playsinline': true, 
-          playsinline: true,
-          controls: false,
-          'aria-label': props.project.media.alt
-        } : {}"
-      />
+      <template v-if="props.project.media.type === 'youtube'">
+        <div class="relative w-full aspect-video">
+          <iframe
+            :src="`https://www.youtube.com/embed/${getYouTubeId(props.project.media.src)}`"
+            class="absolute top-0 left-0 w-full h-full"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+            :aria-label="props.project.media.alt"
+          ></iframe>
+        </div>
+      </template>
+      <template v-else>
+        <component
+          :is="props.project.media.type === 'video' ? 'video' : 'img'"
+          :src="props.project.media.src"
+          :alt="props.project.media.alt"
+          class="w-full object-contain bg-black/50"
+          :aria-label="props.project.media.alt"
+          v-bind="props.project.media.type === 'video' ? { 
+            autoplay: true, 
+            muted: true, 
+            loop: true, 
+            'webkit-playsinline': true, 
+            playsinline: true,
+            controls: false,
+            'aria-label': props.project.media.alt
+          } : {}"
+        />
+      </template>
     </template>
 
     <!-- Content section -->
@@ -122,6 +143,7 @@ const props = defineProps<{
   opacity: 0.5;
 }
 
+/* Arabic-inspired decorative elements */
 .project-card::after {
   content: '';
   position: absolute;

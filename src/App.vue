@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import { ref, onMounted } from "vue";
-import KhipuBackground from "./components/KhipuBackground.vue";
 import ProjectCard from "./components/ProjectCard.vue";
 import { projects } from "./data/portfolio";
 
@@ -46,10 +45,9 @@ onMounted(() => {
 </script>
 
 <template>
-  <KhipuBackground />
-  
   <!-- Main content -->
-  <main class="relative z-10 bg-black" role="main">
+  <main class="relative z-10" role="main">
+    <!-- Header section with refined classical typography -->
     <header class="container max-w-screen-2xl mx-auto pt-8 md:pt-12 pb-6 md:pb-8 flex justify-center" role="banner">
       <div class="max-w-screen-xl w-full">
         <!-- Name with elegant typography -->
@@ -228,6 +226,7 @@ button::after {
   display: none;
 }
 
+/* Arabic-inspired decorative elements */
 .decorative-border {
   position: relative;
 }
