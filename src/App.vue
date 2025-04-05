@@ -50,7 +50,6 @@ onMounted(() => {
   
   <!-- Main content -->
   <main class="relative z-10 bg-black" role="main">
-    <!-- Header section with Arabic-inspired design -->
     <header class="container max-w-screen-2xl mx-auto pt-8 md:pt-12 pb-6 md:pb-8 flex justify-center" role="banner">
       <div class="max-w-screen-xl w-full">
         <!-- Name with elegant typography -->
@@ -229,7 +228,6 @@ button::after {
   display: none;
 }
 
-/* Arabic-inspired decorative elements */
 .decorative-border {
   position: relative;
 }

@@ -9,7 +9,6 @@ const props = defineProps<{
 
 <template>
   <article class="project-card group relative overflow-hidden" role="article" :aria-labelledby="`project-title-${props.project.id}`">
-    <!-- Decorative Arabic-inspired border -->
     <div class="decorative-border absolute top-0 left-0 right-0 h-1"></div>
     
     <!-- Media section -->
@@ -123,7 +122,6 @@ const props = defineProps<{
   opacity: 0.5;
 }
 
-/* Arabic-inspired decorative elements */
 .project-card::after {
   content: '';
   position: absolute;

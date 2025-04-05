@@ -23,6 +23,10 @@ export const projects: Project[] = [
     technologies: ['Python', 'NLP', 'Text Analysis', 'Statistics', 'Educational Technology'],
     links: {
       github: 'https://github.com/kuiperobjects/Text-Stats'
+    },
+    media: {type:'video',
+      src:'https://www.youtube.com/watch?v=z3hMX65Khtg&list=PLRcHmntfmJ8CnSmj4C284-a1euH518aQa',
+      alt:''
     }
   },
   {
