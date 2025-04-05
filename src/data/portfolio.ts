@@ -17,6 +17,33 @@ export interface Project {
 
 export const projects: Project[] = [
   {
+    id: 'text-stats',
+    title: 'Text Stats',
+    description: 'A library providing text statistics for applications like author verification and auto-grading systems. It includes functions to compute metrics such as word frequency, sentence length, and readability scores. This suite of text analysis tools is instrumental in educational and forensic linguistics applications.',
+    technologies: ['Python', 'NLP', 'Text Analysis', 'Statistics', 'Educational Technology'],
+    links: {
+      github: 'https://github.com/kuiperobjects/Text-Stats'
+    }
+  },
+  {
+    id: 'preprocessors',
+    title: 'NLP Preprocessors',
+    description: 'This repository contains text preprocessing functions utilizing four major Natural Language Processing (NLP) libraries for global language support. It demonstrates preprocessing techniques across multiple NLP libraries, providing a comparative resource for developers selecting suitable tools for multilingual NLP tasks.',
+    technologies: ['Python', 'NLTK', 'spaCy', 'Stanford CoreNLP', 'Spark NLP', 'Text Processing'],
+    links: {
+      github: 'https://github.com/kuiperobjects/Preprocessors'
+     }
+  },
+    {
+      id: 'image-translation',
+      title: 'Image to Translated Text',
+      description: 'This tool extracts text from images and translates it into various languages supported by Google. Using Optical Character Recognition (OCR) to extract text from .pdf documents and translation services, it enables understanding content from images in different languages, particularly useful for translating documents without selectable text.',
+      technologies: ['Python', 'OCR', 'Machine Translation', 'Image Processing', 'Document Analysis'],
+      links: {
+        github: 'https://github.com/kuiperobjects/Image-to-Translated-Text'
+      }
+    },
+  {
     id: 'covid-modeling',
     title: 'Peak Deaths: COVID-19 Modeling',
     description: 'This project employs Exploratory Data Analysis (EDA), Linear Regression, and Time Series Models to predict the peak of the COVID-19 pandemic. The analysis combines EDA with predictive modeling in a single workflow, allowing for both understanding past trends and forecasting future outcomes - crucial for informed decision-making during a pandemic.',
@@ -42,32 +69,5 @@ export const projects: Project[] = [
     links: {
       github: 'https://github.com/kuiperobjects/FoodShareNYC'
     }
-  },
-  {
-    id: 'image-translation',
-    title: 'Image to Translated Text',
-    description: 'This tool extracts text from images and translates it into various languages supported by Google. Using Optical Character Recognition (OCR) to extract text from .pdf documents and translation services, it enables understanding content from images in different languages, particularly useful for translating documents without selectable text.',
-    technologies: ['Python', 'OCR', 'Machine Translation', 'Image Processing', 'Document Analysis'],
-    links: {
-      github: 'https://github.com/kuiperobjects/Image-to-Translated-Text'
-    }
-  },
-  {
-    id: 'text-stats',
-    title: 'Text Stats',
-    description: 'A library providing text statistics for applications like author verification and auto-grading systems. It includes functions to compute metrics such as word frequency, sentence length, and readability scores. This suite of text analysis tools is instrumental in educational and forensic linguistics applications.',
-    technologies: ['Python', 'NLP', 'Text Analysis', 'Statistics', 'Educational Technology'],
-    links: {
-      github: 'https://github.com/kuiperobjects/Text-Stats'
-    }
-  },
-  {
-    id: 'preprocessors',
-    title: 'NLP Preprocessors',
-    description: 'This repository contains text preprocessing functions utilizing four major Natural Language Processing (NLP) libraries for global language support. It demonstrates preprocessing techniques across multiple NLP libraries, providing a comparative resource for developers selecting suitable tools for multilingual NLP tasks.',
-    technologies: ['Python', 'NLTK', 'spaCy', 'Stanford CoreNLP', 'Spark NLP', 'Text Processing'],
-    links: {
-      github: 'https://github.com/kuiperobjects/Preprocessors'
-    }
   }
-]; 
+];
