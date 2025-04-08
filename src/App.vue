@@ -19,7 +19,9 @@ const researchStatement = [
 
 // Research areas/keywords array for dynamic rendering
 const researchAreas = [
-  "String Processing",
+ 
+ "Cognitive Science",
+"String Processing",
   "Computational Linguistics",
   "Computational Genomics",
   "Natural Language Processing",
