@@ -13,7 +13,10 @@ export interface Project {
     alt?: string;
     type: 'video' | 'image' | 'youtube';
   };
-  
+  secondaryImages?: {
+    src: string;
+    alt?: string;
+  }[];
 }
 
 export const projects: Project[] = [
@@ -49,9 +52,7 @@ export const projects: Project[] = [
     title: 'Glass Beadwork and LED Pendants',
     description: 'Embeded with the combinatoric logic of genomics and made from all hypoallegenic materials, these unique jewelry pieces are made of Bohemian glass, silver connectors, and microcontrollers programmmed in Arduino to power LED pendants. This jewelry series works with the concept of the cybernatural to strike balance and blur the lines between the digital and physical. I hand shape the hoops out of sterling myself. ',
     technologies: ['C++', 'Microcontrollers', 'Glass Art', 'Sustainable Fashion'],
-    media: {
-      type: 'youtube', src: 'https://www.youtube.com/shorts/Ij7ILr8y4wI', alt: 'Glass Beadwork and LED Pendants'
-    }
+    secondaryImages: [ {src:'/jewelry1.jpg', alt:'Glass Beadwork and LED Pendants'}, {src:'/jewelry2.jpg', alt:'Glass Beadwork and LED Pendants'}, {src:'/jewelry3.png', alt:'Glass Beadwork and LED Pendants'}]
   },
   {
     id: 'foodshare-nyc',

@@ -19,9 +19,8 @@ const researchStatement = [
 
 // Research areas/keywords array for dynamic rendering
 const researchAreas = [
- 
  "Cognitive Science",
-"String Processing",
+  "String Processing",
   "Computational Linguistics",
   "Computational Genomics",
   "Natural Language Processing",
@@ -77,10 +76,10 @@ onMounted(() => {
         <div class="mx-auto px-5 md:px-8 grid grid-cols-1 md:grid-cols-12 gap-y-6 md:gap-x-8">
           <!-- Research statement - elegant proportions with dynamic content -->
           <div class="col-span-1 md:col-span-7 mb-6 md:mb-0" role="region" aria-label="Research Statement">
-            <div class="border-t border-silver/30 pt-6 md:pt-8">
+            <div class="border-t border-silver/30 pt-6 md:pt-8  ">
               <div class="prose prose-invert max-w-none leading-snug md:leading-relaxed">
                 <!-- First paragraph always visible -->
-                <p tabindex="0" class="mb-4 md:mb-3 text-silver">
+                <p tabindex="0" class="mb-4 md:mb-3 text-silver ">
                   {{ researchStatement[0] }}
                 </p>
                 
@@ -91,7 +90,7 @@ onMounted(() => {
                     :key="index"
                     :class="{ 'mb-4 md:mb-3': index < researchStatement.length - 2 }"
                     tabindex="0"
-                    class="text-silver"
+                    class="text-silver "
                   >
                     {{ paragraph }}
                   </p>
@@ -160,9 +159,9 @@ onMounted(() => {
       aria-label="Projects"
     >      
       <div class="max-w-screen-xl mx-auto px-5 md:px-8">
-        <div class="hidden md:block border-t border-silver/30 pt-6 md:pt-8 mb-6"></div>
+        <div class="hidden md:block border-t border-silver/30 pt-6 md:pt-8 font-2xl mb-6"></div>
         <div 
-          class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16 lg:gap-20"
+          class="grid grid-cols-2 gap-8 md:gap-16 lg:gap-20"
           role="list"
           aria-label="Project list"
         >

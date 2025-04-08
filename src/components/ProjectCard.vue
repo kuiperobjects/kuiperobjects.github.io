@@ -52,17 +52,31 @@ const getYouTubeId = (url: string) => {
       </template>
     </template>
 
+    <!-- Secondary Images -->
+    <div v-if="props.project.secondaryImages?.length" class="grid grid-cols-2 gap-4 p-4 bg-black/50">
+      <img
+        v-for="(image, index) in props.project.secondaryImages"
+        :key="index"
+        :src="image.src"
+        :alt="image.alt"
+        :class="[
+          'w-full object-contain bg-black/30 rounded-sm',
+          props.project.secondaryImages.length % 2 !== 0 && index === props.project.secondaryImages.length - 1 ? 'col-span-2 max-w-[50%] mx-auto' : ''
+        ]"
+      />
+    </div>
+
     <!-- Content section -->
     <div class="p-6 md:p-8 bg-black/80 backdrop-blur-sm">
       <!-- Title and links -->
       <div class="flex flex-col md:flex-row md:items-baseline md:justify-between gap-2 md:gap-4 mb-4">
         <h2 
           :id="`project-title-${props.project.id}`"
-          class="font-mono text-xl md:text-2xl text-lavender font-normal"
+          class="font-mono text-xl md:text-xl text-lavender font-normal"
         >
           {{ props.project.title }}
         </h2>
-        <div class="flex items-center gap-x-3 text-sm text-silver">
+        <div class="flex items-center gap-x-3 text-lg text-silver">
           <template v-for="(url, type) in props.project.links" :key="type">
             <a 
               v-if="type === 'github'"
@@ -99,7 +113,7 @@ const getYouTubeId = (url: string) => {
       </div>
 
       <!-- Description -->
-      <p class="text-silver mb-6 md:mb-8 leading-relaxed">
+      <p class="text-silver text-xl mb-6 md:mb-8 leading-relaxed">
         {{ props.project.description }}
       </p>
 
